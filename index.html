@@ -44,7 +44,8 @@
     }
     #menuBtn span {
       display: block;
-      height: 3px;
+      width: 100%;
+      height: 4px;
       background: white;
       border-radius: 2px;
     }
@@ -131,6 +132,7 @@
       display: inline-block;
       margin-top: 20px;
       box-shadow: 0 4px 8px rgba(37,211,102,0.4);
+      transition: background-color 0.3s ease;
     }
     .whatsapp-btn:hover {
       background: #1ebe5a;
@@ -174,7 +176,7 @@
     📩 Contact on WhatsApp
   </a>
 
-  <!-- You can add FAQs and Testimonials sections here if you want -->
+  <!-- You can add FAQs and Testimonials sections here later -->
 
 </main>
 
@@ -183,28 +185,23 @@
   const sideMenu = document.getElementById('sideMenu');
   const overlay = document.getElementById('overlay');
 
-  function openMenu() {
-    sideMenu.classList.add('open');
-    overlay.classList.add('active');
-    menuBtn.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeMenu() {
-    sideMenu.classList.remove('open');
-    overlay.classList.remove('active');
-    menuBtn.setAttribute('aria-expanded', 'false');
-  }
-
   menuBtn.addEventListener('click', () => {
-    if (sideMenu.classList.contains('open')) {
-      closeMenu();
+    const isOpen = sideMenu.classList.contains('open');
+    if (isOpen) {
+      sideMenu.classList.remove('open');
+      overlay.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
     } else {
-      openMenu();
+      sideMenu.classList.add('open');
+      overlay.classList.add('active');
+      menuBtn.setAttribute('aria-expanded', 'true');
     }
   });
 
   overlay.addEventListener('click', () => {
-    closeMenu();
+    sideMenu.classList.remove('open');
+    overlay.classList.remove('active');
+    menuBtn.setAttribute('aria-expanded', 'false');
   });
 </script>
 
