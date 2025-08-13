@@ -3,63 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IGNOU SOLUTION POINT</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>IGNOU Solution Point</title>
 <style>
-body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
-header {background-color: #0077cc; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold;}
-header i {margin-right: 10px;}
-.container {padding: 20px;}
-.price-list {background: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 20px;}
-.price-list h2 {color: #333;}
-.faq, .testimonials {background: #f4f4f4; padding: 20px; border-radius: 5px; margin-top: 20px;}
-.faq h2, .testimonials h2 {color: #444;}
-.faq-item {margin-bottom: 10px;}
-.faq-item strong {display: block; margin-bottom: 5px;}
-.testimonial {border-left: 4px solid #0077cc; padding-left: 10px; margin-bottom: 15px; font-style: italic;}
-.whatsapp-btn {position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold;}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    /* Top Blue Bar */
+    .top-bar {
+        background-color: #007BFF;
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .top-bar img {
+        width: 30px;
+        height: 30px;
+    }
+    /* Main Content */
+    .container {
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #555;
+        font-size: 18px;
+    }
+    /* WhatsApp Button */
+    .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    /* FAQs */
+    .faqs {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+    }
+    .faq-item {
+        margin-bottom: 15px;
+    }
+    .faq-item h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #007BFF;
+    }
+    .faq-item p {
+        margin: 5px 0 0;
+        font-size: 16px;
+        color: #555;
+    }
+    /* Testimonials */
+    .testimonials {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+    }
+    .testimonial {
+        border-left: 5px solid #007BFF;
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+    .testimonial p {
+        font-style: italic;
+        margin: 0;
+    }
+    .testimonial span {
+        display: block;
+        margin-top: 5px;
+        font-weight: bold;
+        color: #333;
+    }
 </style>
 </head>
 <body>
 
-<header>
-    <i class="fa-solid fa-book"></i> IGNOU SOLUTION POINT
-</header>
+<!-- Top Blue Bar -->
+<div class="top-bar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Book_icon_1.png" alt="Book">
+    IGNOU SOLUTION POINT
+</div>
 
+<!-- Existing Content -->
 <div class="container">
     <h1>Welcome to IGNOU Solution Point</h1>
-    <div class="price-list">
-        <h2>Our Pricing</h2>
-        <p>✏ Handwritten Assignment – ₹300 only</p>
-        <p>📄 PDF Solution – ₹30 only</p>
-    </div>
+    <p>Helping over 10,000+ IGNOU students for the past 5 years with fast, accurate, and affordable solutions.</p>
+    <p><strong>Handwritten Assignments – ₹300 Only</strong></p>
+    <p><strong>PDF Solutions – ₹30 Only</strong></p>
+</div>
 
-    <div class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <strong>Q: How can I order solutions?</strong>
-            <span>A: You can order directly through our WhatsApp link below.</span>
-        </div>
-        <div class="faq-item">
-            <strong>Q: Do you provide sample previews?</strong>
-            <span>A: Yes, we share sample previews before you make a purchase.</span>
-        </div>
-        <div class="faq-item">
-            <strong>Q: What payment methods do you accept?</strong>
-            <span>A: We accept UPI and other common Indian payment options.</span>
-        </div>
-    </div>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919999999999?text=Hello%20IGNOU%20Solution%20Point%2C%20I%20would%20like%20to%20order%20a%20solution." class="whatsapp-btn">💬</a>
 
-    <div class="testimonials">
-        <h2>Customer Testimonials</h2>
-        <div class="testimonial">"Very fast and reliable service. Helped me submit on time!" — <strong>Priya Sharma</strong></div>
-        <div class="testimonial">"Affordable and accurate solutions. Highly recommend." — <strong>Rahul Verma</strong></div>
+<!-- FAQs -->
+<div class="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3>Q1: How do I place an order?</h3>
+        <p>Simply click on the WhatsApp button and send us your course code and requirements.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Q2: How will I receive my PDF solutions?</h3>
+        <p>We deliver them instantly via WhatsApp or email after payment.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Q3: Are your assignments original?</h3>
+        <p>Yes, our handwritten assignments are prepared with proper formatting and originality.</p>
     </div>
 </div>
 
-<a href="https://wa.me/919999999999" class="whatsapp-btn">
-    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-</a>
+<!-- Testimonials -->
+<div class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial">
+        <p>"The service is quick and the solutions are 100% accurate!"</p>
+        <span>– Rohan Sharma</span>
+    </div>
+    <div class="testimonial">
+        <p>"Affordable and reliable. Helped me a lot during exams."</p>
+        <span>– Priya Verma</span>
+    </div>
+</div>
 
 </body>
 </html>
