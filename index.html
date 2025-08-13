@@ -3,154 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IGNOU Solution Point</title>
+<meta name="description" content="IGNOU Solution Point - Affordable handwritten assignments and PDF solutions for IGNOU students with free delivery.">
+<meta name="keywords" content="IGNOU assignments, handwritten IGNOU assignments, IGNOU PDF solutions, IGNOU solved assignments, IGNOU study material, IGNOU Odisha, affordable IGNOU assignments, IGNOU delivery">
+<meta name="author" content="IGNOU Solution Point">
+<title>IGNOU SOLUTION POINT</title>
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
+        background: #f9f9f9;
     }
-    /* Top Blue Bar */
+    /* Top Bar */
     .top-bar {
-        background-color: #007BFF;
+        background-color: #004aad;
         color: white;
-        padding: 15px 0;
-        text-align: center;
-        font-size: 24px;
-        font-weight: bold;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 10px;
+        justify-content: space-between;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
-    .top-bar img {
-        width: 30px;
+    .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .title-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        flex: 1;
+    }
+    .title-section img {
         height: 30px;
     }
+    .title-section h1 {
+        margin: 0;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    /* Sidebar */
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #004aad;
+        color: white;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+        z-index: 1100;
+    }
+    .sidebar a {
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    .sidebar a:hover {
+        background-color: #003080;
+    }
     /* Main Content */
-    .container {
-        padding: 20px;
+    .content {
+        padding: 80px 20px 20px;
         text-align: center;
     }
-    h1 {
-        color: #333;
+    .prices {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 10px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
     }
-    p {
-        color: #555;
-        font-size: 18px;
+    .prices p {
+        margin: 5px 0;
+        font-weight: bold;
     }
-    /* WhatsApp Button */
+    .highlight {
+        color: green;
+    }
+    /* WhatsApp Buttons */
     .whatsapp-btn {
+        background: #25D366;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 15px;
+    }
+    .floating-wp {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background-color: #25D366;
-        color: white;
+        background: #25D366;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 28px;
-        text-decoration: none;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+        z-index: 1000;
     }
-    /* FAQs */
-    .faqs {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
+    .floating-wp img {
+        width: 30px;
+    }
+    /* FAQ Section */
+    .faq {
         background: white;
+        margin-top: 20px;
+        padding: 15px;
         border-radius: 8px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .faq h2 {
+        text-align: center;
     }
     .faq-item {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
-    .faq-item h3 {
-        margin: 0;
-        font-size: 18px;
-        color: #007BFF;
-    }
-    .faq-item p {
-        margin: 5px 0 0;
-        font-size: 16px;
-        color: #555;
-    }
-    /* Testimonials */
-    .testimonials {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-    }
-    .testimonial {
-        border-left: 5px solid #007BFF;
-        padding-left: 15px;
-        margin-bottom: 15px;
-    }
-    .testimonial p {
-        font-style: italic;
-        margin: 0;
-    }
-    .testimonial span {
+    .faq-item strong {
         display: block;
-        margin-top: 5px;
-        font-weight: bold;
-        color: #333;
+        margin-bottom: 5px;
     }
 </style>
 </head>
 <body>
 
-<!-- Top Blue Bar -->
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Assignments</a>
+    <a href="#">PDF Solutions</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- Top Bar -->
 <div class="top-bar">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Book_icon_1.png" alt="Book">
-    IGNOU SOLUTION POINT
-</div>
-
-<!-- Existing Content -->
-<div class="container">
-    <h1>Welcome to IGNOU Solution Point</h1>
-    <p>Helping over 10,000+ IGNOU students for the past 5 years with fast, accurate, and affordable solutions.</p>
-    <p><strong>Handwritten Assignments – ₹300 Only</strong></p>
-    <p><strong>PDF Solutions – ₹30 Only</strong></p>
-</div>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919999999999?text=Hello%20IGNOU%20Solution%20Point%2C%20I%20would%20like%20to%20order%20a%20solution." class="whatsapp-btn">💬</a>
-
-<!-- FAQs -->
-<div class="faqs">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-        <h3>Q1: How do I place an order?</h3>
-        <p>Simply click on the WhatsApp button and send us your course code and requirements.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Q2: How will I receive my PDF solutions?</h3>
-        <p>We deliver them instantly via WhatsApp or email after payment.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Q3: Are your assignments original?</h3>
-        <p>Yes, our handwritten assignments are prepared with proper formatting and originality.</p>
+    <span class="menu-icon" onclick="openSidebar()">&#9776;</span>
+    <div class="title-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Book Logo">
+        <h1>IGNOU SOLUTION POINT</h1>
     </div>
 </div>
 
-<!-- Testimonials -->
-<div class="testimonials">
-    <h2>What Our Students Say</h2>
-    <div class="testimonial">
-        <p>"The service is quick and the solutions are 100% accurate!"</p>
-        <span>– Rohan Sharma</span>
+<!-- Main Content -->
+<div class="content">
+    <h2>Welcome to IGNOU Solution Point</h2>
+    <div class="prices">
+        <p>📚 Handwritten Assignment @ <span class="highlight">₹300/- Only</span></p>
+        <p>💻 PDF Solution @ <span class="highlight">₹30/- Only</span></p>
+        <p>✅ Affordable | Lowest Price | Free Delivery</p>
     </div>
-    <div class="testimonial">
-        <p>"Affordable and reliable. Helped me a lot during exams."</p>
-        <span>– Priya Verma</span>
+    <a class="whatsapp-btn" href="https://wa.me/917696933035?text=Hi,%20I%20am%20interested%20in%20your%20assignment%20solutions..please%20send%20me%20details%20and%20prices." target="_blank">Contact on WhatsApp</a>
+
+    <!-- FAQ Section -->
+    <div class="faq">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+            <strong>How do I place an order?</strong>
+            Just WhatsApp us your subject details and we’ll guide you.
+        </div>
+        <div class="faq-item">
+            <strong>How will I receive my assignment?</strong>
+            You’ll get it delivered to your address or via PDF download.
+        </div>
+        <div class="faq-item">
+            <strong>Is payment secure?</strong>
+            Yes, we accept UPI and other safe payment modes.
+        </div>
+        <div class="faq-item">
+            <strong>Do you provide solutions for all courses?</strong>
+            Yes, we have solutions for all IGNOU courses.
+        </div>
     </div>
 </div>
+
+<!-- Floating WhatsApp -->
+<a class="floating-wp" href="https://wa.me/917696933035?text=Hi,%20I%20am%20interested%20in%20your%20assignment%20solutions..please%20send%20me%20details%20and%20prices." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script>
+function openSidebar() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.addEventListener("click", closeSidebarOutside, true);
+}
+function closeSidebarOutside(event) {
+    if (!document.getElementById("mySidebar").contains(event.target) && !event.target.classList.contains("menu-icon")) {
+        document.getElementById("mySidebar").style.width = "0";
+        document.removeEventListener("click", closeSidebarOutside, true);
+    }
+}
+</script>
 
 </body>
 </html>
